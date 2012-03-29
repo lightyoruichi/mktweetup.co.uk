@@ -1,0 +1,27 @@
+
+// Inline list, for navigation.
+.nav_inline{
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+	
+			li{
+				float: left;
+				margin: 0;
+				padding: 0;
+		
+				a{
+					display: block;
+					padding: 5px;
+				}
+			}
+		}
+}
+
+@mixin clearfix{
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+	
+	zoom: 1;
+}
