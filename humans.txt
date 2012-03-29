@@ -1,43 +1,55 @@
 /* the humans responsible & colophon */
 /* humanstxt.org */
 
+/* COMPANY */
+  Bitmode Ltd: Specialist in Design and Development
+  Site: http://bitmodelabs.com
+  Twitter: @bitmodelabs
+  Location: Milton Keynes, England
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Developer: James Pearson
+  Site: http://fearmediocrity.co.uk
+  Twitter: @FearMediocrity
+  Location: Milton Keynes, England
+
+  Designer: Anthony Faconti
+  Site: http://afovea.com
+  Twitter: @afovea
+  Location: Milton Keynes, England
 
 /* THANKS */
-  Names (& URL):
+  Names (& URL): 
+		HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate
+		Sass CSS3 Mixins -  https://github.com/MatthieuA/Sass-Css3-Mixins
 
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
-  Software:
+  Software: Textmate, Adobe Photoshop, 
 
-
-
-                               -o/-
-                               +oo//-
-                              :ooo+//:
-                             -ooooo///-
-                             /oooooo//:
-                            :ooooooo+//-
-                           -+oooooooo///-
-           -://////////////+oooooooooo++////////////::
-            :+ooooooooooooooooooooooooooooooooooooo+:::-
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-
-                     -:+ooooooooooooooooo+:://////:--
-                       /ooooooooooooooooo+//////:-
-                      -ooooooooooooooooooo////-
-                      /ooooooooo+oooooooooo//:
-                     :ooooooo+/::/+oooooooo+//-
-                    -oooooo/::///////+oooooo///-
-                    /ooo+::://////:---:/+oooo//:
-                   -o+/::///////:-      -:/+o+//-
-                   :-:///////:-            -:/://
-                     -////:-                 --//:
-                       --                       -:
+		     :cccccccccccccccccccccccccccccccccccccc:  
+		 cccccccccccccccccccccccccccccccccccccccccccccccc 
+		 cccccccccccccccccccccccccccccccccccccccccccccccc 
+		cccccccccccccccccccccccccccccccccccccccccccccccccc
+		cccccccccccccccccccccccccccccccccccccccccccccccccc
+		cccccccccccccccccccccccccccccccccccccccccccccccccc
+		cccccccccccccccccccccccccccccccccccccccccccccccccc
+		cccccccccccccccccccccccccccccccccccccccccccccccccc
+		cccccccccccccccccccccccccccccccccccccccccccccccccc
+		ccccccccccccccccccccccccccccccccccccoCoocccccccccc
+		cccccccccccccccccccccccccccccccccccC@@@@@@8occcccc
+		cccccccccccccccccccccccccccccccccccC@@@@@@@@Occccc
+		ccccccccccccccccccccccccccccccooocccccco8@@@@Occcc
+		ccccccccccccccccccccccccccccc8@@@@occccco@@@@8cccc
+		cccccccccccccccccccccccccccccO@@@@cccccc8@@@@Occcc
+		cccccccccccccccccccccccccccccO@@@@888@@@@@@@Occccc
+		cccccccccccccccccccccccccccccO@@@@@@@@@@@@@8occccc
+		cccccccccccccccccccccccccccccO@@@@@@@@@@@@@@@@Cccc
+		cccccccccccccccccccccccccccccO@@@@cccccccO@@@@@Ccc
+		cccccccccccccccccccccccccccccO@@@@ccccccccc@@@@@cc
+		cccccccccccccccccccccccccccccO@@@@ccccccccc@@@@@cc
+		cccccccccccccccccccccccccccccO@@@@cccccccC@@@@@Ccc
+		:ccccccccccccccccccccccccccccO@@@@@@@@@@@@@@@@Ccc:
+		 cccccccccccccccccccccccccccc8@@@@@@@@@@@@@@Occcc 
+		  .ccccccccccccccccccccccccccoOOOOOOOOOCocccccc.
