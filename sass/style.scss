@@ -1,0 +1,55 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+@import "html5_reset";
+@import "css3";
+@import "general_mixins";
+
+$tweetup_orange: #ff7e00;
+$tweetup_gray: #6f6f6f;
+
+@mixin circle{
+	@include border-radius(50%);
+	@include box-shadow(-5px, 5px, 0, $tweetup_gray);
+	background: $tweetup_orange;
+	border: 3px solid #FFF;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html{
+	body{
+
+		> header{
+
+		}
+
+		#main{
+
+		}
+
+		> footer{
+
+			nav{
+
+				ul{
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+
+					li{
+
+ 
+						float: left;
+						margin: 0;
+						padding: 10%;
+
+					}
+				}
+			}
+		}
+	}
+}
