@@ -19,20 +19,106 @@ $tweetup_gray: #6f6f6f;
 	border: 3px solid #FFF;
 }
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html{
 
 	background: #FFF url(/img/html_background.png) 0 0 repeat;
-	
+	color: $tweetup_gray;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+
 	body{
 
 		> header{
+			h1{
+				color: transparent;
 
+			}
+
+			p{
+				span{
+
+					&:nth-child(1){
+						font-family: OstrichSansBold;
+						font-size: 72px;
+						font-weight: normal;
+					}
+
+					&:nth-child(2){
+						font-family: LavanderiaRegular;
+						font-size: 72px;
+						font-weight: normal;
+					}
+
+					&:nth-child(3){
+						font-family: OstrichSansBlack;
+						font-size: 60px;
+						font-weight: normal;
+					}
+
+					&:nth-child(4){
+						color: $tweetup_orange;
+
+						font-family: LavanderiaRegular;
+						font-size: 140px;
+						font-weight: normal;
+
+						text-shadow: -3px 3px 0 #FFF,  -6px 6px 0 $tweetup_gray;
+						text-transform: capitalize;
+					}
+				}
+			}
 		}
 
 		#main{
 
+			article{
+				@include circle;
+
+				color: #FFF;
+				padding: 10%;
+
+				height: 250px;
+				width: 250px;
+
+				&.primary{
+					font-family: RighteousRegular;
+					font-size: 30px;
+					font-weight: normal;
+					line-height: 1;
+					text-align: center;
+
+					time{
+						span{
+							display: block;
+						}
+						.day{
+							font-size: 130px;
+							
+							sup{
+								font-size: 40px;
+							}
+						}
+						.month{
+							font-size: 80px;
+							text-transform: uppercase;
+						}
+
+						.year{
+							font-size: 40px;
+							font-weight: normal;
+						}
+					}
+				}
+
+				&.secondary{
+
+				}
+
+				&.tertiary{
+
+				}
+			}
 		}
 
 		> footer{
@@ -45,7 +131,7 @@ html{
 					padding: 0;
 
 					li{
-
+						@include circle;
  
 						float: left;
 						margin: 0;
