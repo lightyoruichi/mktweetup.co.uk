@@ -1,292 +1,560 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- *
- * Detailed information about this CSS: h5bp.com/css
- *
- * ==|== normalize ==========================================================
- */
-
-
-/* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-
-
-/* =============================================================================
-   Base
-   ========================================================================== */
-
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- */
-
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-
-html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-
-body { margin: 0; font-size: 1em; line-height: 1.4; }
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
- */
-
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
-
-/* =============================================================================
-   Links
-   ========================================================================== */
-
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-
-/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
-a:hover, a:active { outline: 0; }
-
-
-/* =============================================================================
-   Typography
-   ========================================================================== */
-
-abbr[title] { border-bottom: 1px dotted; }
-
-b, strong { font-weight: bold; }
-
-blockquote { margin: 1em 40px; }
-
-dfn { font-style: italic; }
-
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
-ins { background: #ff9; color: #000; text-decoration: none; }
-
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
-
-/* Redeclare monospace font family: h5bp.com/j */
-pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
-
-/* Improve readability of pre-formatted text in all browsers */
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
-
-small { font-size: 85%; }
-
-/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-
-
-/* =============================================================================
-   Lists
-   ========================================================================== */
-
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
-dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-
-
-/* =============================================================================
-   Embedded content
-   ========================================================================== */
-
-/*
- * 1. Improve image quality when scaled in IE7: h5bp.com/d
- * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
- */
-
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-
-/*
- * Correct overflow not hidden in IE9
- */
-
-svg:not(:root) { overflow: hidden; }
-
-
-/* =============================================================================
-   Figures
-   ========================================================================== */
-
-figure { margin: 0; }
-
-
-/* =============================================================================
-   Forms
-   ========================================================================== */
-
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-
-/* Indicate that 'label' will shift focus to the associated form element */
-label { cursor: pointer; }
-
-/*
- * 1. Correct color not inheriting in IE6/7/8/9
- * 2. Correct alignment displayed oddly in IE6/7
- */
-
-legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
-
-/*
- * 1. Correct font-size not inheriting in all browsers
- * 2. Remove margins in FF3/4 S5 Chrome
- * 3. Define consistent vertical alignment display in all browsers
- */
-
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
-
-/*
- * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
- */
-
-button, input { line-height: normal; }
-
-/*
- * 1. Display hand cursor for clickable form elements
- * 2. Allow styling of clickable form elements in iOS
- * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
- */
-
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
-
-/*
- * Re-set default cursor for disabled elements
- */
-
-button[disabled], input[disabled] { cursor: default; }
-
-/*
- * Consistent box sizing and appearance
- */
-
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
-
-/*
- * Remove inner padding and border in FF3/4: h5bp.com/l
- */
-
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-
-/*
- * 1. Remove default vertical scrollbar in IE6/7/8/9
- * 2. Allow only vertical resizing
- */
-
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
-
-/* Colors for form validity */
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-
-
-/* =============================================================================
-   Tables
-   ========================================================================== */
-
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
-
-
-/* =============================================================================
-   Chrome Frame Prompt
-   ========================================================================== */
-
-.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
-
-
-/* ==|== primary styles =====================================================
-   Author:
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+  Mixins available:
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Left: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transition              - arguments: What: all, Length: 1s, Easing: ease-in-out
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+
+------------------------------------------------------------- */
+/* BACKGROUND GRADIENT */
+/* BACKGROUND SIZE */
+/* BORDER RADIUS */
+/* BOX */
+/* BOX RGBA */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* COLUMNS */
+/* DOUBLE BORDERS */
+/* FLEX */
+/* FLIP */
+/* FONT FACE */
+/* OPACITY */
+/* OUTLINE RADIUS */
+/* RESIZE */
+/* ROTATE*/
+/* TEXT SHADOW */
+/* TRANSFORM  */
+/* TRANSITION */
+/* TRIPLE BORDERS */
+/* line 4, ../sass/general_mixins.scss */
+.nav_inline ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 9, ../sass/general_mixins.scss */
+.nav_inline ul li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 14, ../sass/general_mixins.scss */
+.nav_inline ul li a {
+  display: block;
+  padding: 5px;
 }
 
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 29, 2012 */
+@font-face {
+  font-family: 'OstrichSansBlack';
+  src: url("/font/ostrich-black-webfont.eot");
+  src: url("/font/ostrich-black-webfont.eot?#iefix") format("embedded-opentype"), url("/font/ostrich-black-webfont.woff") format("woff"), url("/font/ostrich-black-webfont.ttf") format("truetype"), url("/font/ostrich-black-webfont.svg#OstrichSansBlack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'LavanderiaRegular';
+  src: url("/font/lavanderia_regular-webfont.eot");
+  src: url("/font/lavanderia_regular-webfont.eot?#iefix") format("embedded-opentype"), url("/font/lavanderia_regular-webfont.woff") format("woff"), url("/font/lavanderia_regular-webfont.ttf") format("truetype"), url("/font/lavanderia_regular-webfont.svg#LavanderiaRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* ==|== non-semantic helper classes ========================================
-   Please define your styles before this section.
-   ========================================================================== */
+@font-face {
+  font-family: 'OstrichSansBold';
+  src: url("/font/ostrich-bold-webfont.eot");
+  src: url("/font/ostrich-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/font/ostrich-bold-webfont.woff") format("woff"), url("/font/ostrich-bold-webfont.ttf") format("truetype"), url("/font/ostrich-bold-webfont.svg#OstrichSansBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* For image replacement */
-.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent; }
+@font-face {
+  font-family: 'RighteousRegular';
+  src: url("/font/righteous-regular-webfont.eot");
+  src: url("/font/righteous-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/font/righteous-regular-webfont.woff") format("woff"), url("/font/righteous-regular-webfont.ttf") format("truetype"), url("/font/righteous-regular-webfont.svg#RighteousRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden; }
+/* line 72, ../sass/style.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-/* Contain floats: h5bp.com/q */
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-
-
-
-/* ==|== print styles =======================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
+/* line 74, ../sass/style.scss */
+html {
+  background: white url(/img/html_background.png) 0 0 repeat;
+  color: #6f6f6f;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* line 83, ../sass/style.scss */
+html body {
+  zoom: 1;
+  background-image: url("/img/background_stripe.png"), url("/img/background_stripe.png");
+  background-repeat: no-repeat;
+  background-position: 450px 800px, 120px -235px;
+  margin: 0;
+  padding: 0;
+}
+/* line 23, ../sass/general_mixins.scss */
+html body:before, html body:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../sass/general_mixins.scss */
+html body:after {
+  clear: both;
+}
+/* line 92, ../sass/style.scss */
+html body #container {
+  zoom: 1;
+  background: url('/img/assets-s53786f8237.png') 0 -1225px no-repeat;
+  min-width: 1175px;
+}
+/* line 23, ../sass/general_mixins.scss */
+html body #container:before, html body #container:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../sass/general_mixins.scss */
+html body #container:after {
+  clear: both;
+}
+/* line 97, ../sass/style.scss */
+html body #container > header {
+  float: left;
+  height: 450px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+/* line 105, ../sass/style.scss */
+html body #container > header hgroup {
+  -webkit-box-shadow: 4px 4px 0 #6f6f6f;
+  -moz-box-shadow: 4px 4px 0 #6f6f6f;
+  box-shadow: 4px 4px 0 #6f6f6f;
+  -webkit-transform: rotate(52deg);
+  -moz-transform: rotate(52deg);
+  transform: rotate(52deg);
+  background: #ff7e00;
+  border: 4px solid #FFF;
+  border-width: 0 4px 4px 4px;
+  display: block;
+  margin: 0;
+  margin-top: -75px;
+  padding: 10px;
+  position: relative;
+  width: 400px;
+  height: 245px;
+}
+/* line 123, ../sass/style.scss */
+html body #container > header hgroup h1 {
+  -webkit-transform: rotate(-52deg);
+  -moz-transform: rotate(-52deg);
+  transform: rotate(-52deg);
+  background: url('/img/assets-s53786f8237.png') 0 0 no-repeat;
+  bottom: -15px;
+  color: transparent;
+  display: block;
+  position: absolute;
+  right: 5px;
+  min-height: 225px;
+  min-width: 225px;
+}
+/* line 138, ../sass/style.scss */
+html body #container > header p {
+  zoom: 1;
+  display: block;
+  left: 440px;
+  position: absolute;
+  top: 15px;
+  width: 365px;
+}
+/* line 23, ../sass/general_mixins.scss */
+html body #container > header p:before, html body #container > header p:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../sass/general_mixins.scss */
+html body #container > header p:after {
+  clear: both;
+}
+/* line 147, ../sass/style.scss */
+html body #container > header p span {
+  display: block;
+  line-height: 1;
+}
+/* line 153, ../sass/style.scss */
+html body #container > header p span:nth-child(1) {
+  font-family: OstrichSansBold;
+  font-size: 72px;
+  font-weight: normal;
+  padding-left: 35px;
+}
+/* line 161, ../sass/style.scss */
+html body #container > header p span:nth-child(2) {
+  float: left;
+  font-family: LavanderiaRegular;
+  font-size: 72px;
+  font-weight: normal;
+  margin-top: -30px;
+  padding-left: 100px;
+}
+/* line 174, ../sass/style.scss */
+html body #container > header p span:nth-child(3) {
+  float: left;
+  font-family: OstrichSansBlack;
+  font-size: 60px;
+  font-weight: normal;
+  padding-left: 15px;
+}
+/* line 184, ../sass/style.scss */
+html body #container > header p span:nth-child(4) {
+  color: #ff7e00;
+  font-family: LavanderiaRegular;
+  font-size: 140px;
+  font-weight: normal;
+  text-shadow: -3px 3px 0 #ebebeb, -6px 6px 0 #6f6f6f;
+  text-transform: capitalize;
+}
+/* line 202, ../sass/style.scss */
+html body #container #main {
+  zoom: 1;
+  position: relative;
+  z-index: 20;
+  float: left;
+  max-width: 1125px;
+  width: 100%;
+}
+/* line 23, ../sass/general_mixins.scss */
+html body #container #main:before, html body #container #main:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../sass/general_mixins.scss */
+html body #container #main:after {
+  clear: both;
+}
+/* line 211, ../sass/style.scss */
+html body #container #main article {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: -5px 5px 0 #6f6f6f;
+  -moz-box-shadow: -5px 5px 0 #6f6f6f;
+  box-shadow: -5px 5px 0 #6f6f6f;
+  background: #ff7e00;
+  border: 3px solid #f4f4f4;
+  color: #FFF;
+  float: left;
+  height: 390px;
+  margin-top: -110px;
+  padding: 20px;
+  width: 390px;
+}
+/* line 220, ../sass/style.scss */
+html body #container #main article.primary {
+  font-family: RighteousRegular;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1;
+  margin-left: 200px;
+  padding-top: 65px;
+  text-align: center;
+}
+/* line 231, ../sass/style.scss */
+html body #container #main article.primary time span {
+  display: block;
+}
+/* line 234, ../sass/style.scss */
+html body #container #main article.primary time .day {
+  font-size: 130px;
+}
+/* line 237, ../sass/style.scss */
+html body #container #main article.primary time .day sup {
+  font-size: 40px;
+}
+/* line 241, ../sass/style.scss */
+html body #container #main article.primary time .month {
+  font-size: 80px;
+  text-transform: uppercase;
+}
+/* line 246, ../sass/style.scss */
+html body #container #main article.primary time .year {
+  font-size: 40px;
+  font-weight: normal;
+}
+/* line 253, ../sass/style.scss */
+html body #container #main article.secondary {
+  margin-left: 140px;
+  margin-top: 135px;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 260, ../sass/style.scss */
+html body #container #main article.secondary .map {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #ebebeb;
+  color: transparent;
+  display: block;
+  height: 360px;
+  margin-left: 12px;
+  margin-top: 13px;
+  outline: none;
+  width: 360px;
+}
+/* line 274, ../sass/style.scss */
+html body #container #main article.tertiary {
+  margin-left: 190px;
+  margin-top: -40px;
+  padding: 85px 45px;
+}
+/* line 279, ../sass/style.scss */
+html body #container #main article.tertiary h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+/* line 285, ../sass/style.scss */
+html body #container #main article.tertiary p {
+  line-height: 1.6;
+  margin-top: 5px;
+  text-align: center;
+}
+/* line 296, ../sass/style.scss */
+html body #container #main #map_information {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  background: #FFF;
+  color: #000;
+  font-size: 12px;
+  position: absolute;
+  display: none;
+  left: 625px;
+  padding: 20px;
+  top: 110px;
+  width: 285px;
+}
+/* line 57, ../sass/style.scss */
+html body #container #main #map_information:after {
+  border-color: #FFFFFF transparent;
+  border-style: solid;
+  border-width: 40px 0 0 40px;
+  bottom: -40px;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20px;
+  width: 0;
+}
+/* line 307, ../sass/style.scss */
+html body #container #main #map_information h3 {
+  font-family: RighteousRegular;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 5px 0;
+}
+/* line 314, ../sass/style.scss */
+html body #container #main #map_information address {
+  font-style: normal;
+}
+/* line 318, ../sass/style.scss */
+html body #container #main #map_information tel {
+  font-weight: bold;
+}
+/* line 322, ../sass/style.scss */
+html body #container #main #map_information .streetview {
+  border: 2px solid #ff7e00;
+  float: right;
+  width: 94px;
+}
+/* line 327, ../sass/style.scss */
+html body #container #main #map_information .streetview img {
+  display: block;
+}
+/* line 332, ../sass/style.scss */
+html body #container #main #map_information a.button {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #ff7e00;
+  color: #FFF;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 5px;
+}
+/* line 344, ../sass/style.scss */
+html body #container #main #map_information a.close {
+  background: url('/img/assets-s53786f8237.png') 0 -3365px;
+  color: transparent;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  height: 44px;
+  width: 44px;
+}
+/* line 359, ../sass/style.scss */
+html body #container > footer {
+  zoom: 1;
+  float: left;
+  margin-top: -170px;
+  position: relative;
+  padding-bottom: 200px;
+  width: 100%;
+  z-index: 20;
+}
+/* line 23, ../sass/general_mixins.scss */
+html body #container > footer:before, html body #container > footer:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../sass/general_mixins.scss */
+html body #container > footer:after {
+  clear: both;
+}
+/* line 369, ../sass/style.scss */
+html body #container > footer nav {
+  float: left;
+  margin-left: 700px;
+}
+/* line 373, ../sass/style.scss */
+html body #container > footer nav ul {
+  zoom: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
+/* line 23, ../sass/general_mixins.scss */
+html body #container > footer nav ul:before, html body #container > footer nav ul:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../sass/general_mixins.scss */
+html body #container > footer nav ul:after {
+  clear: both;
+}
+/* line 380, ../sass/style.scss */
+html body #container > footer nav ul li {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: -5px 5px 0 #6f6f6f;
+  -moz-box-shadow: -5px 5px 0 #6f6f6f;
+  box-shadow: -5px 5px 0 #6f6f6f;
+  background: #ff7e00;
+  border: 3px solid #f4f4f4;
+  color: #FFF;
+  float: left;
+  margin: 0;
+  margin: 0 25px;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 393, ../sass/style.scss */
+html body #container > footer nav ul li:nth-child(1) {
+  margin-left: 0;
+}
+/* line 397, ../sass/style.scss */
+html body #container > footer nav ul li:nth-child(3) {
+  margin-left: 85px;
+}
+/* line 402, ../sass/style.scss */
+html body #container > footer nav ul li:nth-child(3), html body #container > footer nav ul li:nth-child(4) {
+  margin-top: -10px;
+}
+/* line 406, ../sass/style.scss */
+html body #container > footer nav ul li:hover {
+  border-color: #ff7e00;
+  background: #f4f4f4;
+}
+/* line 411, ../sass/style.scss */
+html body #container > footer nav ul li a {
+  background-repeat: no-repeat;
+  color: transparent;
+  display: block;
+  height: 105px;
+  width: 105px;
+}
+/* line 419, ../sass/style.scss */
+html body #container > footer nav ul li a.twitter {
+  background: url('/img/assets-s53786f8237.png') 0 -2945px;
+}
+/* line 422, ../sass/style.scss */
+html body #container > footer nav ul li a.twitter:hover {
+  background: url('/img/assets-s53786f8237.png') 0 -3409px;
+}
+/* line 427, ../sass/style.scss */
+html body #container > footer nav ul li a.attendees {
+  background: url('/img/assets-s53786f8237.png') 0 -3050px;
+}
+/* line 430, ../sass/style.scss */
+html body #container > footer nav ul li a.attendees:hover {
+  background: url('/img/assets-s53786f8237.png') 0 -3514px;
+}
+/* line 435, ../sass/style.scss */
+html body #container > footer nav ul li a.mkhackday {
+  background: url('/img/assets-s53786f8237.png') 0 -2840px;
+}
+/* line 438, ../sass/style.scss */
+html body #container > footer nav ul li a.mkhackday:hover {
+  background: url('/img/assets-s53786f8237.png') 0 -3260px;
+}
+/* line 443, ../sass/style.scss */
+html body #container > footer nav ul li a.bitmode {
+  background: url('/img/assets-s53786f8237.png') 0 -3155px;
+}
+/* line 446, ../sass/style.scss */
+html body #container > footer nav ul li a.bitmode:hover {
+  background: #FFF;
+  background: url('/img/assets-s53786f8237.png') 0 -3619px;
 }
