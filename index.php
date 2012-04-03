@@ -44,7 +44,7 @@
 
         <article class="primary">
           Next tweetup <time><span class="day"><?php echo date("j", $tweetup_date);?>
-<sup><?php echo date("S", $tweetup_date);?></sup></span> <span class="month"><?php echo date("M", $tweetup_date);?></span> <span class="year"><?php echo date("Y", $tweetup_date);?></span></time>
+<sup><?php echo date("S", $tweetup_date);?></sup></span> <span class="month"><?php echo date("M", $tweetup_date);?></span> <span class="year"><?php echo date("Y", $tweetup_date);?></span> <span class="time">8pm</span></time>
         </article>
 
         <article class="secondary" >
