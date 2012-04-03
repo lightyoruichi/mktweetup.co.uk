@@ -4,7 +4,7 @@
 
   $tweetup_date = strtotime("first Thursday of this month 8pm");
   
-  if(strtotime('now') < $tweetup_date){
+  if(strtotime('now') > $tweetup_date){
     $tweetup_date = strtotime("first Thursday of next month 8pm");
   }
 ?><!doctype html>
@@ -120,7 +120,7 @@
   </script>
   
   <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    var _gaq=[['_setAccount','UA-12544305-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
