@@ -93,24 +93,43 @@
             <p>is a monthly meeting for web designers, developers, digital creatives, photographers, artists, internet professionals and indeed anyone from in and around Milton Keynes (MK) and the surrounding areas.</p>
         </article>
 
+        <nav>
+          <ul>
+            <li>
+              <a href="http://twitter.com/mktweetup" title="Follow the Milton Keynes Tweetup on Twitter" class="twitter">Twitter</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/#!/mktweetup/mk-tweetup-attendees" title="View our regular attendees" class="attendees">Attendees</a>
+            </li>
+            <li>
+              <a href="http://mkhackday.com" title="Find out about MK Hackday" class="mkhackday">MKHackday</a>
+            </li>
+            <li>
+              <a href="http://bitmodelabs.com" title="Site designed and developed by Bitmode Ltd." class="bitmode">Bitmode</a>
+            </li>
+          </ul>
+        </nav>
     </div>
     <footer>
-      <nav>
-        <ul>
-          <li>
-            <a href="http://twitter.com/mktweetup" title="Follow the Milton Keynes Tweetup on Twitter" class="twitter">Twitter</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/#!/mktweetup/mk-tweetup-attendees" title="View our regular attendees" class="attendees">Attendees</a>
-          </li>
-          <li>
-            <a href="http://mkhackday.com" title="Find out about MK Hackday" class="mkhackday">MKHackday</a>
-          </li>
-          <li>
-            <a href="http://bitmodelabs.com" title="Site designed and developed by Bitmode Ltd." class="bitmode">Bitmode</a>
-          </li>
-        </ul>
-      </nav>
+      
+        <div id="subscribe">
+          <p>If you’re not like us and basically check twitter all day every day  then why not subscribe to our email newsletter that comes to you once a month and we’ll let you know when and where the next event will be. We promise (like properly swear!) that we will not provide your details to any third part or spam you.</p>
+          <form action="http://mailer.bitmodelabs.com/t/r/s/wjrhrj/" method="post" id="subForm">
+            
+            <div>
+            <input type="text" name="cm-wjrhrj-wjrhrj" id="wjrhrj-wjrhrj" placeholder="Email" />
+
+            <input type="submit" value="Subscribe" class="button" />
+            </div>
+          </form>
+
+          <p id="sponsor">
+            Sponsored by: <a href="http://campaignmonitor.com" title="Campaign Monitor - Email marketing software for web designers">Campaign Monitor</a>
+          </p>
+
+          <p>Copyright Bitmode Ltd. All rights reserved, MKTweetup is a non-profit event and is run voluntarily to benefit the local community.</p>
+
+        </div>
     </footer>
   </div>
 

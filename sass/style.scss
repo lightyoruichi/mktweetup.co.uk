@@ -13,7 +13,7 @@ $tweetup_orange: #ff7e00;
 $tweetup_lightgray: #ebebeb;
 $tweetup_gray: #6f6f6f;
 $tweetup_not_white: #f4f4f4;
-
+ 
 $assets-layout: smart;
 $assets-sprite: sprite-map("assets/*.png");
 
@@ -88,6 +88,7 @@ html{
 		 
 		margin:0;
 		padding: 0;
+
 
 		#container{
 			@include clearfix;
@@ -358,21 +359,12 @@ html{
 					}
 
 				}
-			}
-
-			> footer{
-				@include clearfix;
-
-				float: left;
-				margin-top: -170px;
-				position: relative;
-				padding-bottom: 200px;
-				width: 100%;
-				z-index: 20;
 
 				nav{
-					float:left;
-					margin-left: 700px;
+					@include clearfix;
+					float:right;
+					margin-top: 190px;
+					margin-right: 25px;
 
 					ul{
 						@include clearfix;
@@ -458,6 +450,76 @@ html{
 						}
 					}
 				}
+			}
+
+			> footer{
+				@include clearfix;
+
+				#subscribe{
+
+
+					float: left;
+					margin-left: 330px;
+					margin-top: 30px;
+					width: 500px;
+
+					p{
+						@include clearfix;
+						font-size: 12px;
+						color: #000;
+					}
+					form{
+						div{
+							@include border-radius(5px);
+
+							background: rgba(225,126,0,0.1);
+							border: 1px solid $tweetup_gray;
+							padding: 10px;
+							margin-bottom: 20px;
+
+							input[type=text]{
+
+								border: 1px solid $tweetup_gray;
+								color: $tweetup_gray;
+								font-size: 36px;
+								padding: 5px;
+								width: 372px;
+
+							}
+
+							input[type=submit]{
+								@include border-radius(5px);
+
+							 	background: $tweetup_orange;
+								border: 1px solid $tweetup_orange;
+								color: #FFFFFF;
+								height: 55px;
+								padding: 15px 20px;
+								vertical-align: top;
+
+							}
+						}
+					}
+
+				
+					#sponsor{
+
+
+						a{
+							background: sprite($assets-sprite, "campaign_monitor");
+							color: transparent;
+							display: block;
+							float: right;
+							height: 46px;
+							width: 373px;
+							margin-bottom: 20px;
+
+						}
+					}	
+				}
+				
+
+				
 			}
 		}
 	}
