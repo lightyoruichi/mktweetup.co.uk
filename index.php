@@ -1,6 +1,6 @@
 <?php
   $venue = "allbarone";
-  $venue_googlemaps_url = "http://maps.google.co.uk/maps?q=weatherspoon,+mk9&hl=en&ll=52.037135,-0.767037&spn=0.007451,0.009313&sll=52.037693,-0.767601&sspn=0.029805,0.037251&t=m&hq=weatherspoon,&hnear=MK9,+United+Kingdom&z=17";
+  $venue_googlemaps_url = "http://maps.google.co.uk/maps?q=all+bar+one,+MK9+2EA&hl=en&sll=52.038818,-0.763013&sspn=0.007662,0.010643&hq=all+bar+one,+MK9+2EA&t=m&z=15";
 
   $tweetup_date = strtotime("first Thursday of this month 8pm");
   

@@ -14,8 +14,8 @@ $tweetup_lightgray: #ebebeb;
 $tweetup_gray: #6f6f6f;
 $tweetup_not_white: #f4f4f4;
  
-$assets-layout: smart;
-$assets-sprite: sprite-map("assets/*.png");
+//$assets-layout: smart;
+//$assets-sprite: sprite-map("assets/*.png");
 
 @mixin circle{
 	@include border-radius(50%);
@@ -92,7 +92,9 @@ html{
 
 		#container{
 			@include clearfix;
-			background: sprite($assets-sprite, "background_holding") no-repeat;
+			//background: sprite($assets-sprite, "background_holding") no-repeat;
+			background: transparent url(/img/assets/background_holding.png) no-repeat;
+
 			min-width: 1175px;			
 	
 			> header{
@@ -124,7 +126,8 @@ html{
 					h1{
 						@include transform(rotate(-52deg));
 
-						background: sprite($assets-sprite, "header_logo") no-repeat;
+						//background: sprite($assets-sprite, "header_logo") no-repeat;
+						background: transparent url(/img/assets/header_logo.png) no-repeat;
 						bottom: -15px;
 						color: transparent;
 						display: block;
@@ -347,7 +350,8 @@ html{
 					}
 
 					a.close{
-						background: sprite($assets-sprite, "map_information_close");
+						//background: sprite($assets-sprite, "map_information_close");
+						background: transparent url(/img/assets/map_information_close.png) no-repeat;
 						color: transparent;
 						display: block;
 						overflow: hidden;
@@ -413,35 +417,42 @@ html{
 							    width: 105px;
 
 								&.twitter{
-									background: sprite($assets-sprite, "footer_nav_twitter");									
+									//background: sprite($assets-sprite, "footer_nav_twitter");	
+									background: transparent url(/img/assets/footer_nav_twitter.png) no-repeat;								
 
 									&:hover{
-										background: sprite($assets-sprite, "footer_nav_twitter_hover");
+										//background: sprite($assets-sprite, "footer_nav_twitter_hover");
+										background: transparent url(/img/assets/footer_nav_twitter_hover.png) no-repeat;								
 									}
 								}
 
 								&.attendees{ 
-									background: sprite($assets-sprite, "footer_nav_attendees");
+									//background: sprite($assets-sprite, "footer_nav_attendees");
+									background: transparent url(/img/assets/footer_nav_attendees.png) no-repeat;								
 
 									&:hover{
-										background: sprite($assets-sprite,"footer_nav_attendees_hover");
+										//background: sprite($assets-sprite,"footer_nav_attendees_hover");
+										background: transparent url(/img/assets/footer_nav_attendees_hover.png) no-repeat;								
 									}
 								}
 
 								&.mkhackday{
-									background: sprite($assets-sprite, "footer_nav_mkhackday");
+									//background: sprite($assets-sprite, "footer_nav_mkhackday");
+									background: transparent url(/img/assets/footer_nav_mkhackday.png) no-repeat;								
 
 									&:hover{
-										background: sprite($assets-sprite, "footer_nav_mkhackday_hover");
+										//background: sprite($assets-sprite, "footer_nav_mkhackday_hover");
+										background: transparent url(/img/assets/footer_nav_mkhackday_hover.png) no-repeat;								
 									}
 								}
 
 								&.bitmode{
-									background: sprite($assets-sprite, "footer_nav_bitmode");
- 
+									//background: sprite($assets-sprite, "footer_nav_bitmode");
+ 									background: transparent url(/img/assets/footer_nav_bitmode.png) no-repeat;								
+
 									&:hover{
-										background: #FFF;
-										background: sprite($assets-sprite, "footer_nav_bitmode_hover");
+										//background: sprite($assets-sprite, "footer_nav_bitmode_hover");
+										background: transparent url(/img/assets/footer_nav_bitmode_hover.png) no-repeat;								
 									}
 								}
 							}
@@ -506,7 +517,8 @@ html{
 
 
 						a{
-							background: sprite($assets-sprite, "campaign_monitor");
+							//background: sprite($assets-sprite, "campaign_monitor");
+							background: transparent url(/img/assets/campaign_monitor.png);
 							color: transparent;
 							display: block;
 							float: right;
