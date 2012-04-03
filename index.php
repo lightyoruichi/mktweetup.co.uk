@@ -17,11 +17,25 @@
 
   <title>MK Tweetup - The home of Milton Keynes geeks, established 2009</title>
 
-  <meta name="description" content="">
-
+  <meta name="description" content="A monthly meeting for web designers, developers, digital creatives, photographers, artists, internet professionals and indeed anyone from in and around Milton Keynes (MK) and the surrounding areas.">
 
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:title" content="MK Tweetup" />
+  <meta property="og:description" content="A monthly meeting for web designers, developers, digital creatives, photographers, artists, internet professionals and indeed anyone from in and around Milton Keynes (MK) and the surrounding areas." />
+  <meta property="og:image" content="/img/assets/header_logo.png" />
+
+  <meta property="image_src" content="/img/assets/header_logo.png" />
+ 
+  <meta name="DC.title" content="MK:Tweetup">
+  <meta name="DC.subject" content="A monthly meeting for web designers, developers, digital creatives, photographers, artists, internet professionals and indeed anyone from in and around Milton Keynes (MK) and the surrounding areas.">
+  <meta name="DC.creator" content="Bitmode Ltd - http://bitmodelabs.com">
+   
+  <meta name="geo.position"   content="52.059447, -0.830169">
+  <meta name="geo.country"  content="GB">
+  <meta name="geo.region"   content="GB-MIK">
+  <meta name="geo.placename"  content="Milton Keynes, United Kingdom">
 
   <script src="/js/libs/modernizr-2.5.3.min.js"></script>
 </head>
