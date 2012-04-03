@@ -228,11 +228,14 @@ html{
 					    text-align: center;
 						
 						time{
+							
+
 							span{
 								display: block;
 							}
 							.day{
 								font-size: 130px;
+								line-height: 0.9;
 								
 								sup{
 									font-size: 40px;
@@ -241,6 +244,7 @@ html{
 							.month{
 								font-size: 80px;
 								text-transform: uppercase;
+								line-height: 0.9;
 							}
 
 							.year{
