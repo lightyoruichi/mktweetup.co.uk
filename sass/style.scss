@@ -10,133 +10,448 @@
 @import "fonts";
 
 $tweetup_orange: #ff7e00;
+$tweetup_lightgray: #ebebeb;
 $tweetup_gray: #6f6f6f;
+$tweetup_not_white: #f4f4f4;
+
+$assets-layout: smart;
+$assets-sprite: sprite-map("assets/*.png");
 
 @mixin circle{
 	@include border-radius(50%);
 	@include box-shadow(-5px, 5px, 0, $tweetup_gray);
 	background: $tweetup_orange;
-	border: 3px solid #FFF;
+	border: 3px solid $tweetup_not_white;
+	color: #FFF;
 }
 
+@mixin bubble{
+	@include border-radius(10px);
+	@include box-shadow(5px, 5px, 5px);
+					
+	background: #FFF;
+	color: #000;
+	font-size: 12px;
+	position: absolute;
+}
+
+@mixin bubble_down{
+	@include bubble;
+
+	&:after{
+		border-color: #F3961C transparent;
+		border-style: solid;
+		border-width: 15px 15px 0;
+		bottom: -15px;
+		content: "";
+		display: block;
+		left: 50px;
+		position: absolute;
+		width: 0;
+	}
+}
+
+@mixin bubble_speech{
+	@include bubble;
+
+	&:after{
+		border-color: #FFFFFF transparent;
+		border-style: solid;
+		border-width: 40px 0 0 40px;
+		bottom: -40px;
+		content: "";
+		display: block;
+		position: absolute;
+		right: 20px;
+		width: 0;
+	}
+}
+
+
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html{
 
 	background: #FFF url(/img/html_background.png) 0 0 repeat;
 	color: $tweetup_gray;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-
+	 
+	margin: 0;
+	padding: 0;
 
 	body{
+		@include clearfix;
+		background-image: url("/img/background_stripe.png"), url("/img/background_stripe.png");
+		background-repeat: no-repeat;
+		background-position: 450px 800px, 120px -235px;
+		 
+		margin:0;
+		padding: 0;
 
-		> header{
-			h1{
-				color: transparent;
+		#container{
+			@include clearfix;
+			background: sprite($assets-sprite, "background_holding") no-repeat;
+			min-width: 1175px;			
+	
+			> header{
+				 
+				float: left;
+			    height: 450px;
+			    position: relative;
+			    width: 100%;
+			    z-index: 10;
 
-			}
+				hgroup{
+					@include box-shadow(4px, 4px, 0, $tweetup_gray);
+					@include transform(rotate(52deg));
+					
+					background: $tweetup_orange;
+					border: 4px solid #FFF;
+					border-width: 0 4px 4px 4px;
 
-			p{
-				span{
+					display: block;
+					margin: 0;
+					margin-top: -75px;
+					padding: 10px;
+					position: relative;
+					width: 400px;
 
-					&:nth-child(1){
-						font-family: OstrichSansBold;
-						font-size: 72px;
-						font-weight: normal;
-					}
+					height: 245px;
+					
 
-					&:nth-child(2){
-						font-family: LavanderiaRegular;
-						font-size: 72px;
-						font-weight: normal;
-					}
+					h1{
+						@include transform(rotate(-52deg));
 
-					&:nth-child(3){
-						font-family: OstrichSansBlack;
-						font-size: 60px;
-						font-weight: normal;
-					}
+						background: sprite($assets-sprite, "header_logo") no-repeat;
+						bottom: -15px;
+						color: transparent;
+						display: block;
+						position: absolute;
+						right: 5px;
 
-					&:nth-child(4){
-						color: $tweetup_orange;
+						min-height: 225px;
+						min-width: 225px;
+					}	
+				}
 
-						font-family: LavanderiaRegular;
-						font-size: 140px;
-						font-weight: normal;
+				p{
+					@include clearfix;
 
-						text-shadow: -3px 3px 0 #FFF,  -6px 6px 0 $tweetup_gray;
-						text-transform: capitalize;
+					display: block;
+					left: 440px;
+					position: absolute;
+					top: 15px;
+					width: 365px;
+
+					span{
+						display: block;
+						
+						line-height: 1;
+						
+
+						&:nth-child(1){
+							font-family: OstrichSansBold;
+							font-size: 72px;
+							font-weight: normal;
+
+							padding-left: 35px;
+						}
+
+						&:nth-child(2){
+							float:left;
+
+							font-family: LavanderiaRegular;
+						    font-size: 72px;
+						    font-weight: normal;
+						    
+						    margin-top: -30px;
+						    padding-left: 100px;
+
+						    
+						}
+
+						&:nth-child(3){
+							float:left;
+
+							font-family: OstrichSansBlack;
+							font-size: 60px;
+							font-weight: normal;
+
+							padding-left: 15px
+						}
+
+						&:nth-child(4){
+
+
+							color: $tweetup_orange;
+
+							font-family: LavanderiaRegular;
+							font-size: 140px;
+							font-weight: normal;
+
+							text-shadow: -3px 3px 0 $tweetup_lightgray,  -6px 6px 0 $tweetup_gray;
+							text-transform: capitalize;
+
+
+						}
 					}
 				}
 			}
-		}
 
-		#main{
+			#main{
+				@include clearfix;
 
-			article{
-				@include circle;
+				position: relative;
+				z-index: 20;
+				float: left;
+				max-width: 1125px;
+				width: 100%;
 
-				color: #FFF;
-				padding: 10%;
+				article{
+					@include circle;
 
-				height: 250px;
-				width: 250px;
+					float:left;
+					height: 390px;
+					margin-top: -110px;				
+					padding: 20px;
+					width: 390px;
 
-				&.primary{
-					font-family: RighteousRegular;
-					font-size: 30px;
-					font-weight: normal;
-					line-height: 1;
-					text-align: center;
+					&.primary{
+						
+						font-family: RighteousRegular;
+					    font-size: 30px;
+					    font-weight: normal;
+					    line-height: 1;
+					    margin-left: 200px;
+					    padding-top: 65px;
+					    text-align: center;
+						
+						time{
+							span{
+								display: block;
+							}
+							.day{
+								font-size: 130px;
+								
+								sup{
+									font-size: 40px;
+								}
+							}
+							.month{
+								font-size: 80px;
+								text-transform: uppercase;
+							}
 
-					time{
-						span{
-							display: block;
-						}
-						.day{
-							font-size: 130px;
-							
-							sup{
+							.year{
 								font-size: 40px;
+								font-weight: normal;
 							}
 						}
-						.month{
-							font-size: 80px;
-							text-transform: uppercase;
-						}
+					}
 
-						.year{
-							font-size: 40px;
-							font-weight: normal;
+					&.secondary{
+						margin-left: 140px;
+	    				margin-top: 135px;
+	    				overflow: hidden;
+	    				padding: 0;
+	    				
+
+	    				.map{
+	    					@include border-radius(50%);
+
+	    					background: $tweetup_lightgray;
+	    					color: transparent;
+	    					display: block;
+	    					height: 360px;
+	    					margin-left: 12px;
+						    margin-top: 13px;
+						    outline: none;
+						    width: 360px;
+	    				}
+					}
+
+					&.tertiary{
+						margin-left: 190px;
+	    				margin-top: -40px;
+	    				padding: 85px 45px;
+
+	    				h2{
+	    					text-align: center;
+	    					margin-bottom: 0;
+
+	    				}
+
+	    				p{
+	    					line-height: 1.6;
+						    margin-top: 5px;
+						    text-align: center;
+	    				}
+					}
+
+
+				}
+
+			
+				#map_information{
+					@include bubble_speech;
+
+					display: none;
+
+					left: 625px;
+					padding: 20px;
+					
+					top: 110px;
+					width: 285px;
+
+					h3{
+						font-family: RighteousRegular;
+					    font-size: 18px;
+					    font-weight: normal;
+					    margin: 5px 0;
+					}
+
+					address{
+						font-style: normal
+					}
+
+					tel{
+						font-weight: bold;
+					}
+
+					.streetview{
+						border: 2px solid $tweetup_orange;
+						float: right;
+						width: 94px;
+
+						img{
+							display: block;
 						}
 					}
-				}
 
-				&.secondary{
+					a.button{
+						@include border-radius(10px);
+						background: $tweetup_orange;
+						color: #FFF;
+						display: block;
 
-				}
+						text-align: center;
+						text-decoration: none;
+						padding: 10px;
+						margin-top: 5px;
+					}
 
-				&.tertiary{
+					a.close{
+						background: sprite($assets-sprite, "map_information_close");
+						color: transparent;
+						display: block;
+						overflow: hidden;
+						position: absolute;
+						right: -15px;
+    					top: -15px;
+						height: 44px;
+						width: 44px;
+					}
 
 				}
 			}
-		}
 
-		> footer{
+			> footer{
+				@include clearfix;
 
-			nav{
+				float: left;
+				margin-top: -170px;
+				position: relative;
+				padding-bottom: 200px;
+				width: 100%;
+				z-index: 20;
 
-				ul{
-					list-style-type: none;
-					margin: 0;
-					padding: 0;
+				nav{
+					float:left;
+					margin-left: 700px;
 
-					li{
-						@include circle;
- 
-						float: left;
+					ul{
+						@include clearfix;
+						list-style-type: none;
 						margin: 0;
-						padding: 10%;
+						padding: 0;
+						width: 400px;
 
+						li{
+							@include circle;
+	 						
+
+							float: left;
+							margin: 0;
+							margin: 0 25px;
+							width: 110px;
+							height:110px;
+							overflow: hidden;
+							padding: 0;
+
+
+							&:nth-child(1){
+								margin-left: 0;
+							}
+
+							&:nth-child(3){
+								margin-left: 85px;
+							}
+
+							&:nth-child(3),
+							&:nth-child(4){	
+								margin-top: -10px;
+							}
+
+							&:hover{
+								border-color: $tweetup_orange;
+								background: $tweetup_not_white;
+							} 
+
+							a{
+									
+							    background-repeat: no-repeat;
+							    color: transparent;
+							    display: block;
+							    height: 105px;
+							    width: 105px;
+
+								&.twitter{
+									background: sprite($assets-sprite, "footer_nav_twitter");									
+
+									&:hover{
+										background: sprite($assets-sprite, "footer_nav_twitter_hover");
+									}
+								}
+
+								&.attendees{ 
+									background: sprite($assets-sprite, "footer_nav_attendees");
+
+									&:hover{
+										background: sprite($assets-sprite,"footer_nav_attendees_hover");
+									}
+								}
+
+								&.mkhackday{
+									background: sprite($assets-sprite, "footer_nav_mkhackday");
+
+									&:hover{
+										background: sprite($assets-sprite, "footer_nav_mkhackday_hover");
+									}
+								}
+
+								&.bitmode{
+									background: sprite($assets-sprite, "footer_nav_bitmode");
+ 
+									&:hover{
+										background: #FFF;
+										background: sprite($assets-sprite, "footer_nav_bitmode_hover");
+									}
+								}
+							}
+
+
+						}
 					}
 				}
 			}
