@@ -107,7 +107,7 @@ html{
 					@include transform(rotate(52deg));
 					
 					background: $tweetup_orange;
-					border: 4px solid #FFF;
+					border: 4px solid $tweetup_not_white;
 					border-width: 0 4px 4px 4px;
 
 					display: block;
