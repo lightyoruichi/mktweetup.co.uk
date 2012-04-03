@@ -71,7 +71,7 @@
               </address>
               <tel>01908 606 07</tel>
 
-              <a href="#" class="button">View on Google Maps</a>
+              <a href="<?php echo $venue_googlemaps_url ?>" class="button">View on Google Maps</a>
         </div>
 
         <article class="tertiary">
