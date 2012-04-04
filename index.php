@@ -24,9 +24,9 @@
 
   <meta property="og:title" content="MK Tweetup" />
   <meta property="og:description" content="A monthly meeting for web designers, developers, digital creatives, photographers, artists, internet professionals and indeed anyone from in and around Milton Keynes (MK) and the surrounding areas." />
-  <meta property="og:image" content="/img/assets/header_logo.png" />
+  <meta property="og:image" content="http://mktweetup.co.uk/img/assets/header_logo.png" />
 
-  <meta property="image_src" content="/img/assets/header_logo.png" />
+  <meta property="image_src" content="http://mktweetup.co.uk/img/assets/header_logo.png" />
  
   <meta name="DC.title" content="MK:Tweetup">
   <meta name="DC.subject" content="A monthly meeting for web designers, developers, digital creatives, photographers, artists, internet professionals and indeed anyone from in and around Milton Keynes (MK) and the surrounding areas.">
@@ -113,7 +113,7 @@
     <footer>
       
         <div id="subscribe">
-          <p>If you’re not like us and basically check twitter all day every day  then why not subscribe to our email newsletter that comes to you once a month and we’ll let you know when and where the next event will be. We promise (like properly swear!) that we will not provide your details to any third part or spam you.</p>
+          <p>If you’re not like us and basically check twitter all day every day  then why not subscribe to our email newsletter that comes to you once a month and we’ll let you know when and where the next event will be. We promise (like properly swear!) that we will not provide your details to any third party or spam you.</p>
           <form action="http://mailer.bitmodelabs.com/t/r/s/wjrhrj/" method="post" id="subForm">
             
             <div>
