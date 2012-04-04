@@ -82,12 +82,14 @@ html{
 
 	body{
 		@include clearfix;
+		
 		background-image: url("/img/background_stripe.png"), url("/img/background_stripe.png");
 		background-repeat: no-repeat;
 		background-position: 450px 800px, 120px -235px;
 		 
 		margin:0;
 		padding: 0;
+		min-width: 1175px;		
 
 
 		#container{
@@ -500,13 +502,16 @@ html{
 
 							input[type=submit]{
 								@include border-radius(5px);
-
+								
+								-webkit-appearance: none;
+								margin-top:1px;
 							 	background: $tweetup_orange;
 								border: 1px solid $tweetup_orange;
 								color: #FFFFFF;
-								height: 55px;
-								padding: 15px 20px;
+								height: 50px;
+								
 								vertical-align: top;
+								width: 100px;
 
 							}
 						}
@@ -535,4 +540,57 @@ html{
 			}
 		}
 	}
+}
+
+
+// IE Fixes
+html.lt-ie9{
+
+	body{
+
+
+
+		a{
+			border: 0;
+
+			img{
+				border: 0
+			}
+		}
+
+		#container{
+
+			header h1,
+			.secondary .map
+			#map_information .close,
+			nav ul li a,
+			.secondary a.map,
+			#sponsor a{
+				text-indent: -9999px;
+			}
+
+
+
+			> header{
+				hgroup{
+					width: 245px !important;
+					margin-top: 0px !important;
+					margin-left: 100px !important;
+				}
+
+				p{
+					display: none;
+				}
+			}
+
+
+
+			nav ul li{
+				margin-bottom: 10px;
+			}
+		
+		}
+
+	}
+
 }

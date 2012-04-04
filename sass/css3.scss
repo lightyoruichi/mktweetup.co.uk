@@ -215,6 +215,7 @@
 @mixin transform($params) {
     -webkit-transform: $params;
     -moz-transform:    $params;
+    -ms-transform:    $params;
     transform:         $params;
 }
 
