@@ -123,9 +123,14 @@
             </div>
           </form>
 
-          <p id="sponsor">
-            Sponsored by: <a href="http://campaignmonitor.com" title="Campaign Monitor - Email marketing software for web designers">Campaign Monitor</a>
-          </p>
+          <div id="sponsor">
+            Sponsored by:  
+            <ul>
+              <li><a href="http://www.crunch.co.uk/?utm_source=PAP&utm_medium=224x130&utm_campaign=symbols&amp;a_aid=bitmode&amp;a_bid=248d0937" id="crunch">Crunch</a></li>
+              <li><a href="http://campaignmonitor.com" id="campaign_monitor" title="Campaign Monitor - Email marketing software for web designers">Campaign Monitor <img style="border:0" src="http://affiliatenetwork.crunch.co.uk/scripts/imp.php?a_aid=bitmode&amp;a_bid=248d0937" width="1" height="1" alt="" /></a></li>
+              
+            </ul>
+          </div>
 
           <p>Copyright Bitmode Ltd. All rights reserved, MKTweetup is a non-profit event and is run voluntarily to benefit the local community.</p>
 

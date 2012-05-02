@@ -473,7 +473,7 @@ html{
 
 					float: left;
 					margin-left: 330px;
-					margin-top: 30px;
+					margin-top: 10px;
 					width: 500px;
 
 					p{
@@ -488,7 +488,7 @@ html{
 							background: rgba(225,126,0,0.1);
 							border: 1px solid $tweetup_gray;
 							padding: 10px;
-							margin-bottom: 20px;
+							margin-bottom: 10px;
 
 							input[type=text]{
 
@@ -519,19 +519,41 @@ html{
 
 				
 					#sponsor{
+						
+						ul{
+							@include clearfix;
+							list-style-type: none;
+							width: 800px;
+							margin: 10px 0 0 0;
+
+							li{
+								float:left;
+								margin: 0;
+
+								a{
+									
+									color: transparent;
+									display: block;
+									
+									margin-bottom: 20px;
 
 
-						a{
-							//background: sprite($assets-sprite, "campaign_monitor");
-							background: transparent url(/img/assets/campaign_monitor.png);
-							color: transparent;
-							display: block;
-							float: right;
-							height: 46px;
-							width: 373px;
-							margin-bottom: 20px;
+									&#campaign_monitor{
+										background: transparent url(/img/assets/campaign_monitor.png);	
+										height: 46px;
+										width: 373px;
+									}
 
+									&#crunch{
+										background: transparent url(http://affiliatenetwork.crunch.co.uk/accounts/default1/banners/224x130-static-creative.gif);	
+										height: 130px;
+										width: 224px;
+										margin-right: 10px;	
+									} 
+								}
+							}
 						}
+						
 					}	
 				}
 				
